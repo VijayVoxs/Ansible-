@@ -1,1 +1,5 @@
-Valid YAML
+---
+192.168.3.107 | SUCCESS => {
+    "changed" ; false,
+    "ping"    ; "pong" 
+}
