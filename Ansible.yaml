@@ -1,4 +1,16 @@
-YAML is Not Valid 
-Error Message:->Unable to parse.
-Line no:->1
-Snippet:->192.168.0.102 | SUCCESS => {
+---
+
+- hosts: 192.168.3.107
+
+  tasks:
+
+  - name: Ping Test
+
+    Hosts:
+    192.168.3.107 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+     
+
+      
