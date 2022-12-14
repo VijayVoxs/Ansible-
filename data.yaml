@@ -1,6 +1,6 @@
 ---
 
-- hosts: 192.168.3.107
+- hosts: Windows
   gather_facts: False
   connection: winrm
 
