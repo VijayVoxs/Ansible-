@@ -1,6 +1,11 @@
-- hosts: 192.168.3.107  
+---
 
-  become: yes  
+- hosts: 192.168.3.107
+  gather_facts: False
+  connection: winrm
 
   tasks:
-   - ping
+
+    - name: ping
+      shell: ping -c 1 -w 2 8.8.8.8
+      ignore_errors: true
