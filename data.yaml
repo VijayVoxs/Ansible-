@@ -1,12 +1,11 @@
 ---
-- name: System-Team
-  hosts: 192.168.3.107
-  gather_facts: false
-  become: false
-  vars:
-    ansible_network_os: windows
 
+- name: ping test
+  connection: winrm
+  gather_facts: false
+  hosts: windows
   tasks:
-  - name: Pinging Host
-     net_ping
-    dest: 192.168.3.107
+
+    - name: ping test
+      192.168.3.107:
+        gather_subset: windows
