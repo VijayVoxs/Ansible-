@@ -1,11 +1,6 @@
----
+- hosts: 192.168.3.107  
 
-- name: ping test
-  connection: winrm
-  gather_facts: false
-  hosts: windows
+  become: yes  
+
   tasks:
-
-    - name: ping test
-      192.168.3.107:
-        gather_subset: windows
+   - ping
