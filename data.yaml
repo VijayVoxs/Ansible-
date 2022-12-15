@@ -1,5 +1,5 @@
 ---
-- hosts: winhost
+- hosts: project-test
   #remote_user: ubuntu
   become: false
   become_method: sudo
