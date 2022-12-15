@@ -2,7 +2,7 @@
 
 - hosts: Win
   gather_facts: False
-  connection: winrm
+  connection: localhost
 
   tasks:
 
