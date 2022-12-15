@@ -2,8 +2,8 @@
 - hosts: project-test
   #remote_user: ubuntu
   become: false
-  become_method: sudo
-  #become_method: runas
+  #become_method: sudo
+  become_method: runas
   gather_facts: yes
   tasks:
 
