@@ -2,7 +2,7 @@
 
 - hosts: Win
   gather_facts: False
-  connection: 192.168.3.107
+  connection: winrm
 
   tasks:
 
