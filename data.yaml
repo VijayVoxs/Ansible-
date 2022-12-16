@@ -1,5 +1,5 @@
 ---
-- hosts: project-test
+- hosts: 192.168.3.107
   #remote_user: ubuntu
   become: false
   #become_method: sudo
