@@ -1,5 +1,5 @@
 ---
-- hosts: 192.168.3.107
+- hosts: Win
   #remote_user: ubuntu
   become: false
   #become_method: sudo
