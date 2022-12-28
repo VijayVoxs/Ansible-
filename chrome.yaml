@@ -1,6 +1,6 @@
 ---
 - name: "install all security updates with automatic reboots"
-  win_updates:
+  Win_updates:
     category_names:
       - SecurityUpdates
       - CriticalUpdates
