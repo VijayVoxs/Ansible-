@@ -1,12 +1,7 @@
 ---
-- name: Install all critical and security updates
+- name: Choose which Windows updates to install
   win_updates:
     category_names:
-    - CriticalUpdates
-    - SecurityUpdates
-    state: installed
-  register: update_result
-
-- name: Reboot host if required
-  win_reboot:
-  when: update_result.reboot_required
+      - SecurityUpdates
+      - CriticalUpdates
+      - UpdateRollups
