@@ -49,7 +49,7 @@
       file:
         path: /tmp/anydesk
         state: directory
-      delegate_to: localhost 
+      delegate_to: localhost
 
     - name: download AnyDesk from url
       get_url:
@@ -65,12 +65,12 @@
     - name: copy AnyDesk from localhost to windows server
       win_copy:
         src: /tmp/ansible/AnyDesk/AnyDesk.msi
-        dest: C:\ansible\AnyDesk.msi
+        dest: C:\\ansible\\AnyDesk.msi
 
     - name: install AnyDesk
       win_package:
         path: 'C:\ansible\AnyDesk.msi'
-        state: present		
+        state: present
 
 #*********Chrome Installation**************************
 
