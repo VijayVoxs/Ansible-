@@ -75,7 +75,7 @@
 #*********Chrome Installation**************************
 ---
 - name: "Chocolatey"
-  hosts: winhost
+  hosts: all
   tasks:
     - name: Install Google Chrome
       win_chocolatey:
