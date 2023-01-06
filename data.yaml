@@ -73,12 +73,12 @@
         state: present		
 
 #*********Chrome Installation**************************
----
-- name: "Chocolatey"
-  hosts: all
-  tasks:
-    - name: Install Google Chrome
-      win_chocolatey:
-          name: googlechrome
-          state: present
-          ignore_checksums: yes
+
+#    - name: "Chocolatey"
+#      hosts: all
+#      tasks:
+#        - name: Install Google Chrome
+#          win_chocolatey:
+#          name: googlechrome
+#          state: present
+#          ignore_checksums: yes
