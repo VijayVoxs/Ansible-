@@ -53,17 +53,17 @@
     - name: download AnyDesk from url
       get_url:
         url: https://download.anydesk.com/AnyDesk.msi
-        dest: /tmp/ansible/AnyDesk
+        dest: /tmp/ansible/
       delegate_to: localhost
     - name: create directory
       win_file:
-        path: C:\ansible\AnyDesk
+        path: C:\ansible\
         state: directory
     - name: copy AnyDesk from localhost to windows server
       win_copy:
-        src: /tmp/ansible/AnyDesk/AnyDesk.msi
-        dest: C:\\ansible\\AnyDesk.msi
+        src: /tmp/ansible/AnyDesk.msi
+        dest: C:\ansible\AnyDesk.msi
     - name: install AnyDesk
       win_package:
         path: C:\ansible\AnyDesk.msi
-        state: presen
+        state: present
