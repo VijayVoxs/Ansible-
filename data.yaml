@@ -50,35 +50,20 @@
         path: /tmp/anydesk
         state: directory
       delegate_to: localhost
-
     - name: download AnyDesk from url
       get_url:
         url: https://download.anydesk.com/AnyDesk.msi
         dest: /tmp/ansible/AnyDesk
       delegate_to: localhost
-
     - name: create directory
       win_file:
         path: C:\ansible\AnyDesk
         state: directory
-
     - name: copy AnyDesk from localhost to windows server
       win_copy:
         src: /tmp/ansible/AnyDesk/AnyDesk.msi
         dest: C:\\ansible\\AnyDesk.msi
-
     - name: install AnyDesk
       win_package:
-        path: 'C:\ansible\AnyDesk.msi'
-        state: present
-
-#*********Chrome Installation**************************
-
-#    - name: "Chocolatey"
-#      hosts: all
-#      tasks:
-#        - name: Install Google Chrome
-#          win_chocolatey:
-#          name: googlechrome
-#          state: present
-#          ignore_checksums: yes
+        path: C:\ansible\AnyDesk.msi
+        state: presen
