@@ -90,3 +90,26 @@
       win_package:
         path: C:\ansible\GoogleChromeStandaloneEnterprise.msi
         state: present
+#******************************pritunl*****************************************************
+    - name: create directory on localhost
+      file:
+        path: /tmp/pritunl
+        state: directory
+      delegate_to: localhost
+    - name: download pritunl from url
+      get_url:
+        url: https://github.com/pritunl/pritunl-client-electron/releases/download/1.3.3373.6/Pritunl.exe
+        dest: /tmp/ansible/
+      delegate_to: localhost
+    - name: create directory
+      win_file:
+        path: C:\ansible\
+        state: directory
+    - name: copy pritunl from localhost to windows server
+      win_copy:
+        src: /tmp/ansible/Pritunl.exe
+        dest: C:\ansible\Pritunl.exe
+    - name: install pritunl
+      win_package:
+        path: C:\ansible\Pritunl.exe
+        state: present
